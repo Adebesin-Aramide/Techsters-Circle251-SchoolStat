@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SchoolStat</title>
+
+  <link rel="stylesheet" href="./dashboard.css">
+
+  <link rel="icon" type="image/svg" sizes="32x32" href="./techsters32x32.svg">
+
+</head>
+
+<body>
+  <main class="techsters">
+    <!-- BRIGHT: This is the sidebar on the left hand side -->
+    <aside class="sidebar">
+      <div class="techsters-logo">
+        <span id="closeSidebar">&times</span>
+        <div class="">
+          <picture>
+            <img src="./techstars.svg" alt="Techsters">
+          </picture>
+          Techsters
+        </div>
+      </div>
+      <nav class="">
+        <ul class="sidebar-items">
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link active">Dashboard</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- BRIGHT: This section below is on the right -->
+    <div class="main-wrapper">
+      <header class="main-header">
+        <div class="main-header__left">
+          <input type="image" src="./hamburger-64.png" alt="hamburger menu" id="sidebarToggler">
+          <h1 class="main-heading">Dashboard</h1>
+        </div>
+        <div class="main-header__right">
+          <picture>
+            <img src="https://pbs.twimg.com/profile_images/1535397990420160513/Ve7WWxDk_400x400.jpg" alt="user">
+          </picture>
+        </div>
+      </header>
+
+      <section class="main-content">
+        <div class="left">
+          <div class="count-cards">
+            <div class="count-card-wrapper">
+              <div class="count-card">
+                <div class="info">
+                  Tracks
+                </div>
+                <div class="tracks">
+                  <div class="track frontend">
+                    <div class="square"></div>
+                    <div class="track-name">Frontend</div>
+                  </div>
+                  <div class="track backend">
+                    <div class="square"></div>
+                    <div class="track-name">Backend</div>
+                  </div>
+                  <div class="track cloud">
+                    <div class="square"></div>
+                    <div class="track-name">Cloud</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="count-card-wrapper">
+              <div class="count-card">
+                <div class="info">
+                  Courses
+                </div>
+                <div class="count" id="coursesCountElement">
+                  🔁
+                </div>
+              </div>
+            </div>
+            <div class="count-card-wrapper">
+              <div class="count-card">
+                <div class="info">
+                  Students
+                </div>
+                <div class="count" id="studentsCountElement">
+                  🔁
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="info-table-wrapper">
+            <div class="table-header">
+              <h2 class="table-heading">Courses</h2>
+              <select name="" id="sortCoursesSelect" class="sort-select">
+                <option value="sn-desc">S/N ⬆</option>
+                <option value="sn-asc" selected>S/N ⬇</option>
+                <option value="name-desc">Names ⬆</option>
+                <option value="name-asc">Names ⬇</option>
+              </select>
+            </div>
+            <table class="info-table">
+              <thead>
+                <tr>
+                  <th>S/N</th>
+                  <th>Name</th>
+                  <th>Track</th>
+                </tr>
+              </thead>
+              <tbody id="coursesTableBody">
+                <!-- 
+                <tr>
+                  <td>1</td>
+                  <td>AWS</td>
+                  <td class="cloud">Cloud</td>
+                  <td>Rachael Onoja</td>
+                </tr> -->
+                <tr>
+                  <td>🔁</td>
+                  <td>🔁</td>
+                  <td>🔁</td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+          <div class="info-table-wrapper">
+            <div class="table-header">
+              <h2 class="table-heading">Statistics</h2>
+            </div>
+            <table class="info-table">
+              <tbody id="coursesTableBody">
+                <tr>
+                  <td>Minimum Age</td>
+                  <td id="minimumAgeCountElement">🔁</td>
+                </tr>
+                <tr>
+                  <td>Maximum Age</td>
+                  <td id="maximumAgeCountElement">🔁</td>
+                </tr>
+                <tr>
+                  <td>Average Age</td>
+                  <td id="averageAgeCountElement">🔁</td>
+                </tr>
+                <tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="right">
+          <div class="info-table-wrapper">
+            <div class="table-header">
+              <h2 class="table-heading">Students</h2>
+              <select name="" id="sortStudentsSelect" class="sort-select">
+                <option value="sn-desc">S/N ⬆</option>
+                <option value="sn-asc" selected>S/N ⬇</option>
+                <option value="name-desc">Names ⬆</option>
+                <option value="name-asc">Names ⬇</option>
+                <option value="age-desc">Age ⬆</option>
+                <option value="age-asc">Age ⬇</option>
+              </select>
+            </div>
+            <table class="info-table">
+              <thead>
+                <tr>
+                  <th>S/N</th>
+                  <th>Name</th>
+                  <th>Track</th>
+                  <th>Gender</th>
+                  <th>Age</th>
+                </tr>
+              </thead>
+              <tbody id="studentsTableBody">
+                <tr>
+                  <td>🔁</td>
+                  <td>🔁</td>
+                  <td>🔁</td>
+                  <td>🔁</td>
+                  <td>🔁</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="info-table-wrapper">
+            <div class="table-header">
+              <h2 class="table-heading">Instructors</h2>
+              <select name="" id="sortInstructorsSelect" class="sort-select">
+                <option value="sn-desc">S/N ⬆</option>
+                <option value="sn-asc" selected>S/N ⬇</option>
+                <option value="name-desc">Names ⬆</option>
+                <option value="name-asc">Names ⬇</option>
+              </select>
+            </div>
+            <table class="info-table">
+              <thead>
+                <tr>
+                  <th>S/N</th>
+                  <th>Name</th>
+                  <th>Courses</th>
+                </tr>
+              </thead>
+              <tbody id="instructorsTableBody">
+                <tr>
+                  <td>🔁</td>
+                  <td>🔁</td>
+                  <td>🔁</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <!-- // ============= EEND DO NOT EDIT ============== // -->
+  <script src="index.mjs" type="module">
+  </script>
+  <!-- // ============= EEND DO NOT EDIT ============== // -->
+</body>
+
+</html>

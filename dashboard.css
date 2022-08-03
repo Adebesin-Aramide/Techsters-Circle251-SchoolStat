@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Nunito:wght@300;400;500;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Nunito', sans-serif;
+}
+
+main.techsters {
+    width: 100%;
+}
+
+body {
+    background-color: #d5e4dd;
+}
+
+
+aside.sidebar {
+    background-color: #fff;
+    height: 100%;
+    left: -280px;
+    min-height: 100vh;
+    position: fixed;
+    width: 280px;
+    z-index: 100;
+}
+
+@media screen and (min-width: 1024px) {
+    aside.sidebar {
+        left: 0;
+    }
+}
+
+aside.sidebar.slide-in {
+    left: 0;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px;
+
+}
+
+div.techsters-logo {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0 40px;
+    position:  relative;
+}
+
+#closeSidebar {
+  display: none;
+}
+
+aside.sidebar.slide-in #closeSidebar {
+  color: #fff;
+  background-color: red;
+  border-radius: 8px;
+  display: block;
+  font-size: 30px;
+  font-weight: 700;
+  padding: 0 10px;
+  position: absolute;
+  right: -40px;
+}
+
+div.techsters-logo div {
+    align-items: center;
+    color: #16908f;
+    display: flex;
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+}
+
+.techsters-logo picture {   
+    margin-right: 8px;
+}
+
+aside.sidebar ul.sidebar-items {
+    list-style-type: none;
+}
+
+aside.sidebar a.sidebar-link {
+    border: 6px inset transparent;
+    color: #16908f;
+    display: block;
+    font-size: 18px;
+    padding: 10px;
+    padding-left: 40px;
+    text-decoration: none;
+    transition: all ease 500ms;
+    width: 100%;
+}
+
+aside.sidebar a.sidebar-link.active {
+    background-color: #d5e4dd;
+    border-right-color: #16908f;
+}
+
+aside.sidebar a.sidebar-link:hover {
+    background-color: #d5e4dd;
+}
+
+
+div.main-wrapper {
+    margin-left: 0;
+}
+
+@media screen and (min-width: 1024px) {
+    div.main-wrapper {
+        margin-left: 280px;
+    }
+}
+
+header.main-header {
+    align-items: center;
+    background-color: #fff;
+    display: flex;
+    height: 70px;
+    justify-content: space-between;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+}
+
+header.main-header .main-header__left {
+    align-items: center;
+    display: flex;
+}
+
+
+header.main-header .main-header__left input {
+    display: inline-block;
+    height: 32px;
+    margin-right: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+    header.main-header {
+        height: 100px;
+    }
+
+    header.main-header .main-header__left input {
+        display: none;
+    }
+}
+
+
+header.main-header h1.main-heading {
+    color: #000;
+    font-size: 20px;
+} 
+
+header.main-header .main-header__right {
+    padding-right: 30px;
+}
+
+header.main-header .main-header__right img {
+    border: 2px solid #d5e4dd;
+    border-radius: 50%;
+    display: block;
+    height: 50px;
+    object-fit: cover;
+    width: 50px;
+}
+
+section.main-content {
+    padding: 30px 10px;   
+}
+
+@media screen and (min-width: 768px) {
+    section.main-content {
+        display: flex;
+    }
+
+    section.main-content .left {
+        padding-right: 10px;
+        width: 50%; 
+    }
+
+    section.main-content .right {
+        padding-left: 10px;
+        width: 50%;
+    }
+}
+
+div.count-cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1024px) {
+    div.count-cards {
+        height: 140px;
+    }
+}
+
+div.count-cards div.count-card-wrapper {
+    padding: 0 10px;
+    height: 100%;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+div.count-cards div.count-card {
+    background-color: #fff;
+    border-radius: 10px;
+    /* box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px; */
+    padding: 20px 30px;
+}
+
+@media screen and (min-width: 1024px) {
+    div.count-cards div.count-card-wrapper {
+        width: 33.333%;
+        height: 100%;
+    }
+    div.count-cards div.count-card {
+        height: 100%;
+    }
+}
+
+div.count-cards div.count-card div.info {
+    color: #16908f;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+div.count-cards div.count-card div.count {
+    color: #16908f;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+div.count-cards .track {
+    align-items: center;
+    display: flex;
+    font-weight: 700;
+    padding-bottom: 1px;
+    padding-top: 1px;
+}
+
+div.count-cards .track .square {
+    border-radius: 4px;
+    height: 16px;
+    margin-right: 8px;
+    width: 16px;
+}
+
+div.count-cards .track.frontend .square {
+    background-color: #86c89a;
+}
+
+div.count-cards .track.backend .square {
+    background-color: #ffba19;
+}
+
+div.count-cards .track.cloud .square {
+    background-color: #258382;
+}
+
+div.count-cards .track .student-count {
+    margin-left: auto;
+}
+
+.info-table-wrapper {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    overflow-x: auto;
+}
+
+.table-header  {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 6px;
+}
+
+h2.table-heading {
+    color: #16908f;
+    font-size: 20px;
+}
+
+.table-header select.sort-select  {
+    border: 2px solid #16908f;
+    border-radius: 6px;
+    color: #16908f;
+    padding: 4px;
+}
+
+table.info-table {
+    color: #817f7f;
+    text-align: left;
+    width: 100%;
+    white-space: nowrap;
+}
+
+table.info-table th {
+    color: #258382;
+}
+
+table.info-table th, table.info-table td {
+    padding: 4px 10px;
+}
+
+table.info-table td {
+    border-bottom: 1px solid #e2ebeb;
+}
+table.info-table td.frontend {
+    color: #86c89a;
+}
+
+table.info-table td.backend {
+    color: #ffba19;
+}
+
+table.info-table td.cloud {
+    color: #258382;
+}
+
+table.info-table tr:last-of-type td {
+    border-bottom: 0;
+}
